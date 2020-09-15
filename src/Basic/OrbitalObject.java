@@ -49,13 +49,8 @@ public abstract class OrbitalObject {
         int xDif = object.getPoint().getX() - this.getPoint().getX();
         int yDif = object.getPoint().getY() - this.getPoint().getY();
         int zDif = object.getPoint().getZ() - this.getPoint().getZ();
-       // double xSquared = Math.pow(xDif, 2);
-       // double ySquared = Math.pow(yDif, 2);
-       // double zSquared = Math.pow(zDif, 2);
-      //  double allTogether = xSquared + ySquared + zSquared;
-        System.out.println(allTogether);
-        System.out.println(Math.sqrt(xSquared + ySquared + zSquared));
-        return Math.sqrt(xSquared + ySquared + zSquared);
+
+        return Math.sqrt(Math.pow(xDif, 2) + Math.pow(yDif, 2) + Math.pow(zDif, 2));
         //d(P1, P2) = Square root of (x2 - x1)^2 + (y2 - y1)^2 + (z2 - z1)^2
     }
 }

@@ -43,7 +43,8 @@ class PlanetTest {
         Planet earth = new Planet(new Point(1,2,3), null, "Earth");
         Planet mars = new Planet(new Point(100,223,341), null, "Mars");
 
-        assertEquals(481.17, earth.calculateDistance(mars));
-       // assertEquals(-1, mars.calculateDistance(earth));
+        //delta - as long as the result isn't greater than a difference of 0.009 - Test = Success
+        assertEquals(415.79, earth.calculateDistance(mars), 0.009); //from one planet
+        assertEquals(415.79, mars.calculateDistance(earth), 0.009); //the other planet - should result in same distance
     }
 }
